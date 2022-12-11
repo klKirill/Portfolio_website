@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 105px;
+    background-color: black;
+
+    top: 0;
+}
+
+
+.navigation-button {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgb(0, 221, 221);
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.navigation-button-line {
+    display: block;
+    position: absolute;
+    top: 48%;
+    right: 23%;
+    width: 25px;
+    height: 2px;
+    background-color: aliceblue;
+
+}
+
+.navigation-button-line::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 7px;
+}
+
+.navigation-button-line::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: aliceblue;
+    position: absolute;
+    top: -7px;
+}
+
+.page-header {
+    color: aliceblue;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    height: 25px;
+    margin-bottom: 30px;
+}
+
+.breaker {
+    /* display: inline-block; */
+    width: 95%;
+    margin: auto;
+    height: 1px;
+    background-color: aliceblue;
+    content: "";
+}
+
+h1 {
+    font-size: 21pt;
+}
+
+.name-and-picture {
+    background-color: black;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.circle-super-wrapper {
+    padding: 75px;
+    border-radius: 50%;
+    background-image: radial-gradient(white, black);
+}
+
+.circle-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    
+}
+
+
+
+.circle {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.image {
+    opacity: 1;
+}
+
+.arrow {
+    width: 300px;
+    height: 300px;
+}
+
+
+.line-left {
+    background-color: black;
+    width: 120px;
+    height: 25px;
+    border-radius: 15px;
+    transform: rotate(45deg);
+    margin-top: 140px;
+    margin-left: 50px;
+
+}
+
+.line-right {
+    background-color: black;
+    border-radius: 15px;
+    width: 120px;
+    height: 25px;
+    transform: rotate(135deg);
+    margin-top: -25px;
+    margin-left: 120px;
+}
+
+.about {
+    background-color: black;
+    width: 100%;
+    height: 800px;
+}
