@@ -15,8 +15,20 @@
     width: 50px;
     margin-left: 55px;
 }
+
+    .link-wrapper:hover {
+        background-color: rgb(53, 53, 53);
+        width: 550px;
+        height: 220px;
+        margin: 5px;
+    }
 </style>
 <body>
+    <div class="drop-menu">
+        <div class="l-wrapper"><a href="./home.html" class="l"><h1 class="page-header">Home</h1></a></div>
+        <div class="l-wrapper"><a href="./thing.html" class="l"><h1 class="page-header">Favourite thing</h1></a></div>
+        <div class="l-wrapper"><a href="./place.html" class="l"><h1 class="page-header">favourite Place</h1></a></div>
+    </div>
     <header class="header">
         <div class="navigation-button">
             <div class="navigation-button-line"></div>
@@ -50,12 +62,10 @@
         <div class="breaker"></div>
         <div class="about-main">
             <div class="part">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti debitis, voluptas aut obcaecati consequuntur tempore maxime! Atque distinctio repudiandae cupiditate doloribus earum, temporibus architecto quibusdam laboriosam suscipit dolorem magni ipsa.</p>
+                <p>Hello, my name is Kirill Lashchenov. I am 18 year old student at UTS college studying information technology, and when I will go to UTS college I will be studying cybersecurity. Furthermore, I have a couple of hobbies, I enjoy playing computer games, my favourite computer game is Tom Clancy's Rainbow Six Siege, watching movies, programming, and traveling. Also, I enjoy reading books, my favourite book is Atlas Shrugged by Ayn Rand.</p>
             </div>
             <div class="part">
-                <div class="subpart"><p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae eum, asperiores facilis dolorem ea voluptates? Et ullam qui natus rerum delectus unde, laboriosam eos inventore, magni impedit consequuntur veritatis?</p></div>
-                <div class="subpart"><p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae eum, asperiores facilis dolorem ea voluptates? Et ullam qui natus rerum delectus unde, laboriosam eos inventore, magni impedit consequuntur veritatis?</p></div>
-                
+                <img src="./images/r6s.jpg" alt="game logo" width="500px">
             </div>
         </div>
     </section>
@@ -67,8 +77,23 @@
             <div class="link-wrapper"><a href="./thing.html" class="link">My favourite things</a></div>
             <div class="link-wrapper"><a href="./place.html" class="link">My favourite place</a></div>
         </div>
+        <div class="breaker"></div>
+    </section>
+    <section class="qrcode" style="background-color: black;">
+    <div class="breaker"></div>
+    <h2 class="page-header">source code</h2>
+    <div class="breaker"></div>
+        <div class="source" style="display: flex; 
+        background-color: black;
+        height: 300px;
+        align-items: center; 
+        justify-content: space-evenly;
+        flex-wrap: wrap; padding: 15px">
+        <p>https://github.com/klKirill/Portfolio_website</p>
+        <img src="./images/qrcode.png" alt="qrcode" width="250px" height="250px"></div>
         
     </section>
+    <script src="./index.js"></script>
 </body>
 <footer style="background-color: black;
  color: aliceblue; 

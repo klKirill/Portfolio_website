@@ -1,14 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/place.css">
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favourite place</title>
 </head>
+<style>
+    * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.header {
+    width: 100%;
+    height: 105px;
+    background-color: black;
+
+    top: 0;
+}
+
+
+.navigation-button {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgb(0, 221, 221);
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.navigation-button:hover {
+    width: 55px;
+    height: 55px;
+}
+
+.navigation-button-line {
+    display: block;
+    position: absolute;
+    top: 48%;
+    right: 23%;
+    width: 25px;
+    height: 2px;
+    background-color: aliceblue;
+
+}
+
+.navigation-button-line::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 7px;
+}
+
+.navigation-button-line::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: aliceblue;
+    position: absolute;
+    top: -7px;
+}
+
+.page-header {
+    color: aliceblue;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    height: 25px;
+    margin-bottom: 30px;
+}
+
+.breaker {
+    /* display: inline-block; */
+    width: 95%;
+    margin: auto;
+    height: 1px;
+    background-color: aliceblue;
+    content: "";
+}
+
+h1 {
+    font-size: 21pt;
+}
+
+.name-and-picture {
+    background-color: black;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.circle-super-wrapper {
+    margin: 20px;
+    padding: 75px;
+    border-radius: 50%;
+    background-image: radial-gradient(white, black);
+    transition: all 0.5s;
+}
+
+.circle-super-wrapper:hover {
+    padding: 95px;
+    margin: 0px;
+
+}
+
+.circle-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    
+}
+
+
+
+.circle {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.image {
+    opacity: 1;
+}
+
+.arrow {
+    width: 300px;
+    height: 300px;
+}
+
+
+.line-left {
+    background-color: black;
+    width: 120px;
+    height: 25px;
+    border-radius: 15px;
+    transform: rotate(45deg);
+    margin-top: 140px;
+    margin-left: 50px;
+
+}
+
+.line-right {
+    background-color: black;
+    border-radius: 15px;
+    width: 120px;
+    height: 25px;
+    transform: rotate(135deg);
+    margin-top: -25px;
+    margin-left: 120px;
+}
+
+.about {
+    background-color: black;
+    width: 100%;
+    min-height: 400px;
+}
+
+
+
+.about-main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about-main:last-child {
+    padding: 25px 25px 50px 25px;
+}
+
+
+
+
+.p {
+    font-size: 14pt;
+    padding: 15px;
+    text-align: left;
+}
+
+.more-info {
+    background-color: black;
+    width: 100%;
+    min-height: 307px;
+    color: aliceblue;
+}
+
+.link-wrapper {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    margin: 25px;
+    justify-content: center;
+    padding: 15px 50px;
+    border:1px solid aliceblue;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.link-wrapper:hover {
+    background-color: rgb(53, 53, 53);
+    width: 550px;
+    height: 220px;
+    margin: 5px;
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25pt;
+}
+
+.super-link-wrapper { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+a:hover {
+    color: rgb(184, 184, 184);
+    background-image: url();
+    z-index: 1000;
+}
+
+a {
+    transition: all 0.2s;
+}
+
+p {
+    font-size: 16pt;
+}
+
+.source p {
+    color: aliceblue;
+    font-size: 17pt;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 900px;
+    flex: 1 1;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+.main-picture { 
+    height : 45%;
+    margin: 25px;
+
+}
+
+.main-header {
+    font-size: 38pt;
+    color: aliceblue;
+    margin: 25px;
+    background: linear-gradient(rgb(0, 221, 221), white);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.further-information {
+
+    background-color: black;
+    
+
+}
+
+.picture-general {
+    height: 450px;
+
+}
+
+.additional-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.side {
+    width: 700px;
+   display: flex;
+   align-items: center;
+    justify-content: center;
+   color: aliceblue;
+   padding: 55px;
+}
+
+.part {
+    padding: 55px;
+    max-width: 700px;
+    display: inline-block;
+    min-width: 330px;
+    height: 350px;
+    color: aliceblue;
+    
+}
+
+
+
+.drop-menu {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    transition: all 0.3s;
+    display: none;
+}
+
+.l-wrapper {
+    background-color: rgb(0, 221, 221);
+    transition: all 0.2s;
+}
+
+.l-wrapper:hover {
+    background-color: rgb(0, 150, 150);
+}
+
+
+
+
+
+</style>
 <body>
+    <div class="drop-menu">
+        <div class="l-wrapper"><a href="./home.html" class="l"><h1 class="page-header">Home</h1></a></div>
+        <div class="l-wrapper"><a href="./thing.html" class="l"><h1 class="page-header">Favourite thing</h1></a></div>
+        <div class="l-wrapper"><a href="./place.html" class="l"><h1 class="page-header">favourite Place</h1></a></div>
+    </div>
     <header class="header">
         <div class="navigation-button">
             <div class="navigation-button-line"></div>
@@ -30,7 +377,7 @@
             <img src="images/so.jpg" alt="Sydney Opera picture 2" class="picture-general">
         </div>
         <div class="side">
-            <p class="standart-paragraph">The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th century architecture.</p>
+            <p class="standart-paragraph">The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th century architecture. I do like this place because it is beautiful and located in the city centre of Sydney. I especially like this place at nights because it looks even more futuristic when being highlighted in the darkness.</p>
          
         </div>
         </div>
@@ -39,10 +386,10 @@
     <section class="further-information">
         <div class="about-main">
             <div class="part">
-                <p class="standart-paragraph">The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th century architecture.</p>
+                <p class="standart-paragraph">Designed by Danish architect Jørn Utzon, but completed by an Australian architectural team headed by Peter Hall, the building was formally opened by Queen Elizabeth II on 20 October 1973[5] after a gestation beginning with Utzon's 1957 selection as winner of an international design competition. The Government of New South Wales, led by the premier, Joseph Cahill, authorised work to begin in 1958 with Utzon directing construction. The government's decision to build Utzon's design is often overshadowed by circumstances that followed, including cost and scheduling overruns as well as the architect's ultimate resignation.&#9;<a href="https://en.wikipedia.org/wiki/Sydney_Opera_House">read more</a></p>
             </div>
             <div class="part">
-                <p class="standart-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti debitis, voluptas aut obcaecati consequuntur tempore maxime! Atque distinctio repudiandae cupiditate doloribus earum, temporibus architecto quibusdam laboriosam suscipit dolorem magni ipsa.</p>
+                <p class="standart-paragraph">The building comprises multiple performance venues, which together host well over 1,500 performances annually, attended by more than 1.2 million people.[7] Performances are presented by numerous performing artists, including three resident companies: Opera Australia, the Sydney Theatre Company and the Sydney Symphony Orchestra. As one of the most popular visitor attractions in Australia, the site is visited by more than eight million people annually, and approximately 350,000 visitors take a guided tour of the building each year.[8] The building is managed by the Sydney Opera House Trust, an agency of the New South Wales State Government. &#9;<a href="https://en.wikipedia.org/wiki/Sydney_Opera_House">read more</a></p>
                 
             </div>
         </div>
@@ -51,15 +398,14 @@
             
         </div>
     </section>
+    <script src="./index.js"></script>
 </body>
 <footer style="background-color: black;
  color: aliceblue; 
  display: inline-block;
  width: 100%;
  text-align: center;
- padding: 35px 10px;
- ">
- <div class="breaker" style="margin-bottom: 25px;"></div>
+ padding: 35px 10px;">
     Made by Kirill Lashchenov SID: 14444386
 </footer>
 </html>
