@@ -42,6 +42,4 @@ function toggleMenu(state) {
         opened = false;
     }
 
-
-  
 }
