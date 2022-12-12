@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .header {
@@ -84,13 +85,15 @@ h1 {
 
 .name-and-picture {
     background-color: black;
-    height: 80vh;
+    min-height: 700px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .circle-super-wrapper {
+    margin: 20px;
     padding: 75px;
     border-radius: 50%;
     background-image: radial-gradient(white, black);
@@ -146,5 +149,56 @@ h1 {
 .about {
     background-color: black;
     width: 100%;
-    height: 800px;
+    min-height: 400px;
+}
+
+
+
+.about-main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-main:last-child {
+    padding: 25px;
+}
+
+.part {
+    max-width: 500px;
+    display: inline-block;
+    min-width: 300px;
+    height: 200px;
+    color: aliceblue;
+    
+}
+
+
+.standart-paragraph {
+    font-size: 12pt;
+    padding: 15px;
+    text-align: left;
+}
+
+.more-info {
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    color: aliceblue;
+}
+
+.link-wrapper {
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    padding: 15px 50px;
+    background-color: red;
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
 }
