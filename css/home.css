@@ -97,6 +97,13 @@ h1 {
     padding: 75px;
     border-radius: 50%;
     background-image: radial-gradient(white, black);
+    transition: all 0.5s;
+}
+
+.circle-super-wrapper:hover {
+    padding: 95px;
+    margin: 0px;
+
 }
 
 .circle-wrapper {
@@ -159,7 +166,7 @@ h1 {
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .about-main:last-child {
@@ -172,12 +179,13 @@ h1 {
     min-width: 300px;
     height: 200px;
     color: aliceblue;
+    margin: 5px;
     
 }
 
 
-.standart-paragraph {
-    font-size: 12pt;
+.p {
+    font-size: 14pt;
     padding: 15px;
     text-align: left;
 }
@@ -185,20 +193,52 @@ h1 {
 .more-info {
     background-color: black;
     width: 100%;
-    height: 300px;
+    min-height: 307px;
     color: aliceblue;
 }
 
 .link-wrapper {
-    display: inline-block;
-    width: 100%;
-    height: 45px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    margin: 25px;
+    justify-content: center;
     padding: 15px 50px;
-    background-color: red;
+    border:1px solid aliceblue;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.link-wrapper:hover {
+    background-color: rgb(53, 53, 53);
+    width: 550px;
+    height: 220px;
+    margin: 5px;
 }
 
 .link {
     text-decoration: none;
     color: aliceblue;
+    font-size: 25pt;
+}
+
+.super-link-wrapper { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+a:hover {
+    color: rgb(184, 184, 184);
+    background-image: url();
+    z-index: 1000;
+}
+
+a {
+    transition: all 0.2s;
+}
+
+p {
+    font-size: 16pt;
 }
