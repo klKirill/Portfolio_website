@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -307,7 +308,7 @@ p {
     max-width: 700px;
     display: inline-block;
     min-width: 330px;
-    height: 350px;
+    max-height: 450px;
     color: aliceblue;
     
 }
